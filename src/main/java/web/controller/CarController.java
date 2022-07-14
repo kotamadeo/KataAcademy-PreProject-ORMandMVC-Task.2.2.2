@@ -5,18 +5,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import web.dao.CarDAO;
 import web.model.Car;
+import web.service.CarService;
 
 import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/cars")
 public class CarController {
-    private final CarDAO car;
+    private final CarService car;
 
     @Autowired
-    public CarController(CarDAO car) {
+    public CarController(CarService car) {
         this.car = car;
     }
 
